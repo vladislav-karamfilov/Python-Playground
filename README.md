@@ -1,2 +1,2 @@
-# Python-Playground
+# Python Playground
 Small projects in Python programming language
