@@ -22,7 +22,8 @@ def count_consonants(string):
 
 
 def main():
-    string = input('Enter a string to get the count of vowels and consonants in it: ')
+    string = input(
+        'Enter a string to get the count of vowels and consonants in it: ')
     print('Vowels count: ', count_vowels(string))
     print('Consonants count: ', count_consonants(string))
 

@@ -18,7 +18,7 @@ def is_transversal(transversal, family):
             if element in set:
                 set_contains_at_least_one_element = True
                 break
-            
+
         if not set_contains_at_least_one_element:
             return False
 
