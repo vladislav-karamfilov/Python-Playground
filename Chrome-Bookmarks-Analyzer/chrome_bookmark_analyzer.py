@@ -4,12 +4,12 @@ import json
 import sys
 
 
-def add_to_url_folder_mappings(url, folder, url_folder_mappings, ignore_query_string):
-    if ignore_query_string:
-        actual_url = url
-    else:
+def add_to_url_folder_mappings(url, folder, url_folder_mappings, ignore_protocol_and_fragment):
+    if ignore_protocol_and_fragment:
         parsed_url = urlparse(url)
-        actual_url = parsed_url.scheme + '://' + parsed_url.netloc + parsed_url.path
+        actual_url = parsed_url.netloc + parsed_url.path + '?' + parsed_url.query
+    else:
+        actual_url = url
 
     if actual_url in url_folder_mappings:
         if folder in url_folder_mappings[actual_url]:
